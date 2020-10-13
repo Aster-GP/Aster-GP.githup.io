@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/album.css">
+    <link rel="stylesheet" href="font/font_2059899_4233w7mrl4p/iconfont.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="name">Aster</div>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="album.html">相册</a></li>
+                <li><a href="guestbook.html">说说</a></li>
+                <li><a href="future.html">未来</a></li>
+                <li><a href="javascript:;">友链</a></li>
+                <li><a href="javascript:;">关于</a></li>
+                <span class="decoration">
+                </span>
+            </ul>
+            <span class="myiconfont iconfont icon-qq">
+                <a></a>
+            </span>
+        </div>
+    </nav>
+    <main>
+        <ul>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+            <li>
+                <div class="mask"></div>
+                <a href="javascript:;">
+                    <img src="images/item2.jpg">
+                </a>
+                <div class="time">Time:2020年09月10日</div>
+            </li>
+        </ul>
+    </main>
+    <script>
+        $("nav ul li").on("mouseenter", function () {
+            // console.log($(this).outerWidth());  //100px
+            // console.log($(this).index());
+            $(".decoration").stop().animate({ "left": $(this).outerWidth() * $(this).index() });
+        });
+        $("nav ul").on("mouseleave", function () {
+            $(".decoration").stop().animate({ "left": "100px" });
+        });
+        $(window).on("scroll", function () {
+            if ($(this).scrollTop() >= $("nav").outerHeight() + 38) {
+                $("nav").css({ "position": "fixed", "top": "0px", "display": "none" });
+                $("nav").slideDown();
+            } else {
+                $("nav").css({ "position": "static", "display": "none" });
+                $("nav").slideDown();
+            }
+        });
+        $("main ul li").on("mouseenter", function () {
+            $(this).children(".mask").css("display", "block");
+        })
+        $("main ul li").on("mouseleave", function () {
+            $(this).children(".mask").css("display", "none");
+        });
+        $(".myiconfont a").attr("href", "/User/QQLogin");
+        $("main").show(1000);
+    </script>
+</body>
+
+</html>

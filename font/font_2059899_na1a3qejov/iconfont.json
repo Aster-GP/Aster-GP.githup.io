@@ -1,0 +1,16 @@
+{
+  "id": "2059899",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6805306",
+      "name": "表情系列",
+      "font_class": "Happy-Wink",
+      "unicode": "e93d",
+      "unicode_decimal": 59709
+    }
+  ]
+}

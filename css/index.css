@@ -1,0 +1,311 @@
+/* 第一视图开始 */
+html,body{
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    position: relative;
+}
+.nav{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    text-align: center;
+    line-height: 10px;
+    font-size: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, .3);
+    overflow: hidden;
+    transition: background .6s;
+}
+.nav span{
+    display: inline-block;
+    width: 20px;
+    background-color: white;
+    margin-top:1px;
+    border: .3px solid white;
+}
+.nav:hover{
+    background:aqua;
+}
+
+/* 控制页面面板开始 */
+.panpel{
+    position: fixed;
+    right: -658px;
+    width: 500px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 888;
+    transform: skew(-12deg,0deg);
+    transform-origin: left top;
+}
+.panpel .name{
+    width: 180px;
+    height: 20px;
+    color: white;
+    font-size: 20px;
+    margin: 250px auto 50px;
+}
+.panpel .classify{
+    width: 200px;
+    height: 20px;
+    margin: 30px auto;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.panpel .classify:hover a{
+    color: aqua;
+}
+/* 控制页面面板结束 */
+
+.mask{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
+.mask .b-title{
+    width: 300px;
+    height: 200px;
+    margin: 200px auto;
+    color: white;
+    font-family: "宋体";
+    text-align: center;
+}
+.mask .b-title .title{
+    height: 50px;
+    line-height: 50px;
+    animation: font-b .8s ease-out forwards;
+}
+.mask .b-title .s-title-c{
+    margin-top: 10px;
+    height: 30px;
+    line-height: 30px;
+    animation: font-s .6s ease-out forwards;
+}
+.mask .b-title .s-title{
+    height: 30px;
+    line-height: 30px;
+    animation: font-s .6s ease-out forwards;
+}
+.mask .b-title hr{
+    display: block;
+    margin: 0 auto;
+    animation: hr-width .6s ease-out forwards;
+}
+@keyframes font-b{
+    0%{
+        font-size: 0;
+    }
+    100%{
+        font-size: 50px;
+    }
+}
+@keyframes font-s{
+    0%{
+        font-size: 0;
+    }
+    100%{
+        font-size: 20px;
+    }
+}
+@keyframes hr-width{
+    0%{
+        width:1px;
+    }
+    100%{
+        width:100%;
+    }
+}
+.mask .b-title .login{
+    width: 100px;
+    height: 30px;
+    background-color: aqua;
+    margin: 30px auto;
+    cursor: pointer;
+    border-radius: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    transition: all .3s;
+}
+.mask .b-title .login:hover{
+    transform:scale(1.3);
+}
+.mask .slide{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 0px;
+    left:50%;
+    margin-left:-25px;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+.mask .slide:hover{
+    transform: rotate(180deg);
+    background-color: skyblue;
+}
+/* 第一视图结束 */
+
+/* 分割层 */
+.split{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
+/* 分割层 */
+
+/* 第二视图开始 */
+
+.content{
+    width: 100%;
+    height: 600px;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+.masks{
+    width: 100%;
+    height: 100%;
+    /* background-color: white; */
+}
+.content .article{
+    width: 200px;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+}
+.content .letter{
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.content ._{
+    text-align: center;
+    width:30px;
+    background-color: aqua;
+    border: 2px solid aqua;
+    margin: 20px auto;
+}
+.content .ul_item{
+    margin-top: 30px;
+    display:flex;
+    justify-content: space-around;
+}
+.content .ul_item li{
+    width: 300px;
+    height: 380px;
+    background-color: #faf9f9;
+    position: relative;
+}
+.content .ul_item li .item_title{
+    margin-top: 10px;
+    font-size: 16px;
+}
+.content .ul_item li .time{
+    color:#bdbdbd;
+}
+.content .ul_item li .item_content{
+    font-size: 14px;
+    color:#a2a2a2;
+}
+.content .ul_item li .more{
+    position: absolute;
+    bottom: 0;
+}
+.content .ul_item li .more a{
+    font-size: 14px;
+    color: grey;
+}
+.content .ul_item li .more a:hover{
+    color:aqua;
+}
+/* 第二视图结束 */
+
+/* 分割层 */
+.splits{
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/bg2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.splits .about{
+    width: 300px;
+    height: 50px;
+    border: 1px solid white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    margin: 85px auto;
+    color: aqua;
+    cursor: cell;
+    position: relative;
+    overflow: hidden;
+}
+.splits .about span{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    transform: translate(-300px,-50px);
+}
+.splits .about:hover span{
+    animation: power .6s forwards;
+}
+@keyframes power{
+    0%{
+        transform: translate(-300px,-50px);
+    }
+    100%{
+        transform: translate(0,-50px);
+    }  
+}
+/* 分割层 */
+
+/* 底部开始 */
+.end{
+    width: 100%;
+    height: 350px;
+    background-color: white;
+    font-size: 20px;
+    overflow: hidden;
+}
+.end .title{
+    width: 800px;
+    height: 100px;
+    /* background-color: aqua; */
+    margin: 125px auto;
+    text-indent: 2em;
+}
+.end .title p:nth-child(2){
+    text-align: right;
+}
+.footer{
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, .8);
+}
+.footer ul{
+    display: flex;
+    justify-content: space-around;
+}
+.footer ul li .t{
+   font-size: 20px;
+   color:#f1f3f4;
+}
+/* 底部结束 */

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/guestbook.css">
+    <link rel="stylesheet" href="font/font_2059899_4233w7mrl4p/iconfont.css">
+    <link rel="stylesheet" href="font/font_2059899_na1a3qejov/iconfont.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="name">Aster</div>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="album.html">相册</a></li>
+                <li><a href="guestbook.html">说说</a></li>
+                <li><a href="future.html">未来</a></li>
+                <li><a href="javascript:;">友链</a></li>
+                <li><a href="javascript:;">关于</a></li>
+                <span class="decoration">
+                </span>
+            </ul>
+            <span class="myiconfont iconfont icon-qq">
+                <a></a>
+            </span>
+        </div>
+    </nav>
+    <main>
+        <div class="guest">
+            <h2>留言板</h2>
+            <div class="s-title">————沟通交流，拉近你我————</div>
+            <div class="text">
+                <div class="enotions">
+                    <span class="myiconfonts iconfont icon-Happy-Wink"></span>
+                    <div class="gif"></div>
+                </div>
+                <textarea name="" id="textarea" placeholder="记录下好心情叭！"></textarea>
+            </div>
+            <div class="submit">
+                <input type="submit" id="submit" value="提交留言">
+            </div>
+        </div>
+        <div class="comment">
+            <ul>
+                <li>
+                    <div class="content">
+                        <div class="author">
+                            <img src="images/ASTER.jpg">
+                            <p class="info">Aster</p>
+                        </div>
+                        <div class="txt">あなたが存在意义を见つけたということです。</div>
+                        <div class="time">广东省广州市天河区 2020/9/12</div>
+                    </div>
+
+                    <span class="options">···
+                        <ul>
+                            <li>点赞</li>
+                            <li>删除</li>
+                            <li>评论</li>
+                        </ul>
+                    </span>
+
+                </li>
+                <li>
+                    <div class="content">
+                        <div class="author">
+                            <img src="images/MHUIXUE.jpg">
+                            <p class="info">MHUIXUE</p>
+                        </div>
+                        <div class="txt">お愿いします。このまま一绪にいます。15778595285
+                        </div>
+                        <div class="time">广东省百色学院 2020/9/12</div>
+                    </div>
+                    <span class="options">···
+                        <ul>
+                            <li>点赞</li>
+                            <li>删除</li>
+                            <li>评论</li>
+                        </ul>
+                    </span>
+
+                </li>
+                <li>
+                    <div class="content">
+                        <div class="author">
+                            <img src="images/ASTER.jpg">
+                            <p class="info">Aster</p>
+                        </div>
+                        <div class="txt">あなたが存在意义を见つけたということです。</div>
+                        <div class="time">广东省广州市天河区 2020/9/12</div>
+                    </div>
+                    <span class="options">···
+                        <ul>
+                            <li>点赞</li>
+                            <li>删除</li>
+                            <li>评论</li>
+                        </ul>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+<script>
+    $("nav ul li").on("mouseenter", function () {
+        // console.log($(this).outerWidth());  //100px
+        // console.log($(this).index());
+        $(".decoration").stop().animate({ "left": $(this).outerWidth() * $(this).index() });
+    });
+    $("nav ul").on("mouseleave", function () {
+        $(".decoration").stop().animate({ "left": "200px" });
+    });
+    $(".myiconfont a").attr("href", "https://graph.qq.com/oauth2.0/show?which=Login&display=pc & response_type=code & client_id=101477621 & redirect_uri=https % 3A % 2F % 2Fsso.e.qq.com % 2Fpassport % 3Fservice_tag % 3D14 % 26sso_redirect_uri % 3Dhttps % 253A % 252F % 252Fadnet.qq.com % 252F & scope=get_user_info");
+    $(".comment ul").show(1000);
+
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() >= $("nav").outerHeight() + 38) {
+            $("nav").css({ "position": "fixed", "top": "0px", "display": "none" });
+            $("nav").slideDown();
+        } else {
+            $("nav").css({ "position": "static", "display": "none" });
+            $("nav").slideDown();
+        }
+    });
+    //动态创建评论区
+    $("#submit").on("click", function () {
+        if ($("#textarea").val() == "") {
+            alert("输入留言才能发表哦!");
+            return;
+        }
+        str = "";
+        var newLi = $("<li></li>");
+        var result = replace_em($("#textarea").val());
+        var txt = $(`<div class="content">
+                        <div class="author">
+                            <img src="images/MHUIXUE.jpg">
+                            <p class="info">Aster</p>
+                        </div>
+                        <div class="txt">${result}</div>
+                        <div class="time">广东省广州市天河区 2020/9/12</div>
+                    </div>`);
+
+        newLi.append(txt);
+        var str_ = ` <span class="options">···
+                        <ul>
+                            <li>点赞</li>
+                            <li>删除</li>
+                            <li>评论</li>
+                        </ul>
+                    </span>`;
+        newLi.append(str_);
+        newLi.css("display", "none");
+        $(".comment>ul").prepend(newLi);
+        newLi.slideDown(300);
+        $("#textarea").val("");
+        Hover();
+        Delete();
+    });
+    // 交互行为
+    function Hover() {
+        $(".comment>ul>li .options").hover(
+            function () {
+                $(this).find("ul li").stop().slideDown(300);
+            },
+            function () {
+                $(this).find("ul li").stop().slideUp(300);
+            }
+        );
+    }
+    Hover();
+    for (var i = 1; i <= 75; i++) {
+        var url = "images/" + i + ".gif";
+        $(".gif").append(("<img src= '" + url + "'></img>"));
+    }
+    //表情包
+    var flag = true;
+    var str = "";
+    function replace_em(str) {
+        //用正则将输入框字符串中的特殊符号自动替换成对应的表情图片 然后返回新的字符串
+        str = str.replace(/\[em_([0-9]*)\]/g, '<img src="images/$1.gif" style="width:20px;height:20px">');
+        return str;
+    }
+    $(".myiconfonts").on("click", function () {
+        if (flag) {
+            $(".gif").slideDown(300);
+            flag = false;
+        } else {
+            $(".gif").slideUp(300);
+            flag = true;
+        }
+    });
+
+    $(".gif").on("click", "img", function () {
+        var t = this.src.split("/");
+        var _t = t[t.length - 1].split(".")[0];
+        $("#textarea")[0].value += "[em_" + _t + "]";
+        $(".gif").slideUp(300);
+        flag = true;
+    });
+    function Delete() {
+        $(".options ul li:nth-child(2)").on("click", function () {
+            $(this).parents("li").remove();
+        })
+    }
+    Delete();
+</script>
+
+</html>

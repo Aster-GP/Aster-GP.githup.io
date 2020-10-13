@@ -1,0 +1,64 @@
+@font-face{
+    font-family: myfont;
+    src: url(../font/华文琥珀.ttf);
+}
+/* 导航栏开始 */
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    z-index: 999;
+    box-shadow: 0 5px 10px 0 grey;
+}
+nav .container{
+    width: 1226px;
+    height: 100px;
+    margin: 0 auto;
+}
+nav .name{
+    display: inline-block;
+    line-height: 100px;
+    font-size: 50px;
+    font-family: myfont;
+}
+nav ul{
+    width: 600px;
+    height: 50px;
+    float: right;
+    margin-right: 300px;
+    margin-top: 25px;
+}
+nav ul li{
+    line-height: 50px;
+    float: left;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: all 1s;
+}
+nav ul .decoration{
+    display: block;
+    width: 100px;
+    border: 1px solid aqua;
+    background: aqua;
+    margin-top: 50px;
+    position: relative;
+    left: 300px;
+}
+.myiconfont{
+    font-size: 30px !important;
+    position: absolute;
+    top: 0;
+    right: 200px;
+    line-height: 100px;
+    cursor: pointer;
+}
+.myiconfont a{
+    position: fixed;
+    right: 200px;
+    top: 25px;
+    width: 50px;
+    height: 50px;
+    display:inline-block;
+}
+/* 导航栏结束 */

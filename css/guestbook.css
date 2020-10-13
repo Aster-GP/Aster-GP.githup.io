@@ -1,0 +1,237 @@
+body{
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+}
+@font-face{
+    font-family: myfont;
+    src: url(../font/华文琥珀.ttf);
+}
+/* 导航栏开始 */
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    z-index: 999;
+    box-shadow: 0 5px 10px 0 grey;
+}
+nav .container{
+    width: 1226px;
+    height: 100px;
+    margin: 0 auto;
+}
+nav .name{
+    display: inline-block;
+    line-height: 100px;
+    font-size: 50px;
+    font-family: myfont;
+}
+nav ul{
+    width: 600px;
+    height: 50px;
+    float: right;
+    margin-right: 300px;
+    margin-top: 25px;
+}
+nav ul li{
+    line-height: 50px;
+    float: left;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: all 1s;
+}
+nav ul .decoration{
+    display: block;
+    width: 100px;
+    border: 1px solid aqua;
+    background: aqua;
+    margin-top: 50px;
+    position: relative;
+    left: 200px;
+}
+.myiconfont{
+    font-size: 30px !important;
+    position: absolute;
+    top: 0;
+    right: 200px;
+    line-height: 100px;
+    cursor: pointer;
+}
+.myiconfont a{
+    position: fixed;
+    right: 200px;
+    top: 25px;
+    width: 50px;
+    height: 50px;
+    display:inline-block;
+}
+/* 导航栏结束 */
+
+/* 留言栏开始 */
+main{
+    width: 1226px;
+    margin: 10px auto;
+}
+main h2{
+    text-align: center;
+    font-size: 30px;
+    font-family: "宋体";
+    color: white;
+}
+main .s-title{
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 10px;
+    color: white;
+}
+.guest .text{
+    width: 1226px;
+    height: 250px;
+    border: 1px solid #767676;
+}
+.guest .text .enotions{
+    width: 1226px;
+    height: 50px;
+    border-bottom: 1px solid #767676;
+    box-sizing: border-box;
+    background-color: #dfdfdf;
+    position: relative;
+}
+.guest .text .enotions .gif{
+    width: 400px;
+    height: 180px;
+    z-index: 2;
+    position: absolute;
+    display: none;
+    border: 1px solid grey;
+    font-size: 0;
+    background-color: white;
+}
+.guest .text .enotions .gif img{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #dfdfdf;
+    box-sizing: border-box;
+}
+.guest .text textarea{
+    outline: none;
+    width: 1226px;
+    height: 200px;
+    border: none;
+    text-indent: 2em;
+    word-wrap: break-word;
+    padding-top: 12px;
+    box-sizing: border-box;
+}
+.guest .submit #submit{
+    width: 100px;
+    height: 30px;
+    background-color: aqua;
+    color: white;
+    margin-top: 20px;
+    float: right;
+    border: 1px solid #dfdfdf;
+}
+.guest .submit{
+    overflow: hidden;
+}
+.guest .myiconfonts{
+    font-size: 20px;
+    line-height: 50px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+/* 留言栏结束 */
+
+/* 评论栏开始 */
+.comment{
+    margin-top: 50px;
+    height: 800px;
+}
+.comment>ul{
+    display: none;
+}
+.comment>ul>li{
+    width: 1226px;
+    height: 120px;
+    background-color: white;
+    border-bottom: 1px dashed grey;
+    text-indent: 1em;
+    padding: 5px;
+    margin: 0;
+    padding: 0;
+}
+.comment>ul>li .content{
+    width: 1100px;
+    height: 120px;
+    display: inline-block;
+    position: relative;
+}
+.comment>ul>li .content .author{
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+}
+.comment>ul>li .content .author .info{
+    display: inline-block;  
+    color: aqua;
+    font-size: 14px; 
+}
+.comment>ul>li .content .author img{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.comment>ul>li .content .txt{
+    text-indent: 7em;
+}
+.comment>ul>li .content .txt>img{
+    display: inline;
+}
+.comment>ul>li .content .time{
+    color: #dee1e6;
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    bottom: 10px;
+}
+.comment>ul>li span{
+    display: block;
+    background-color: #dfdfdf;
+    width: 100px;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+    text-indent: 0;
+    float: right;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+}
+.comment>ul>li span ul{
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+.comment>ul>li span ul li{
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #d3e4f5;
+    border:1px solid grey;
+    box-sizing: border-box;
+    display: none;
+    border-radius: 10px;
+}
+.comment>ul>li span ul li:hover{
+    background-color: aqua;
+}
+/* 评论栏结束 */

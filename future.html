@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/future.css">
+    <style>
+        body {
+            background-color: #232323;
+            /* color: aliceblue */
+        }
+
+        #mineCanvas {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            z-index: 2;
+        }
+
+        .title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .content {
+            width: 800px;
+            height: 300px;
+            background-color: white;
+            margin: 0 auto;
+            position: absolute;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="name">Aster</div>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="album.html">相册</a></li>
+                <li><a href="guestbook.html">说说</a></li>
+                <li><a href="future.html">未来</a></li>
+                <li><a href="javascript:;">友链</a></li>
+                <li><a href="javascript:;">关于</a></li>
+                <span class="decoration">
+                </span>
+            </ul>
+            <span class="myiconfont iconfont icon-qq">
+                <a></a>
+            </span>
+        </div>
+    </nav>
+    <div class="content"></div>
+    <canvas id="mineCanvas"></canvas>
+
+
+    <script src="js/index.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $("nav ul li").on("mouseenter", function () {
+            // console.log($(this).outerWidth());  //100px
+            // console.log($(this).index());
+            $(".decoration").stop().animate({ "left": $(this).outerWidth() * $(this).index() });
+        });
+        $("nav ul").on("mouseleave", function () {
+            $(".decoration").stop().animate({ "left": "300px" });
+        });
+        $(".myiconfont a").attr("href", "https://graph.qq.com/oauth2.0/show?which=Login&display=pc & response_type=code & client_id=101477621 & redirect_uri=https % 3A % 2F % 2Fsso.e.qq.com % 2Fpassport % 3Fservice_tag % 3D14 % 26sso_redirect_uri % 3Dhttps % 253A % 252F % 252Fadnet.qq.com % 252F & scope=get_user_info");
+        $(".comment ul").show(1000);
+
+        $(window).on("scroll", function () {
+            if ($(this).scrollTop() >= $("nav").outerHeight() + 38) {
+                $("nav").css({ "position": "fixed", "top": "0px", "display": "none" });
+                $("nav").slideDown();
+            } else {
+                $("nav").css({ "position": "static", "display": "none" });
+                $("nav").slideDown();
+            }
+        });
+    </script>
+</body>
+
+</html>

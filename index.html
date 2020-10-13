@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="nav">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="panpel">
+        <div class="name">Aster</div>
+        <div class="classify"><a href="album.html">——相册——</a></div>
+        <div class="classify"><a href="guestbook.html">——说说——</a></div>
+        <div class="classify"><a href="future.html">——未来——</a></div>
+    </div>
+    <div class="mask">
+        <div class="b-title">
+            <div class="title">Aster</div>
+            <div class="s-title-c">能遇见你真是太好了</div>
+            <div class="s-title">あなたに会えてよかったです</div>
+            <hr>
+            <div class="login">Enter</div>
+        </div>
+        <div class="slide">^</div>
+    </div>
+    <div class="split"></div>
+
+    <div class="content">
+        <div class="masks">
+            <div class="article">
+                <h1>咱们的文章</h1>
+                <div class="_"></div>
+            </div>
+            <div class="letter">
+                <p>很想给你写封信,告诉你这里的天气.</p>
+                <p>昨夜的那场电影,还有我的心情.</p>
+            </div>
+            <ul class="ul_item">
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/item1.jpg">
+                    </a>
+                    <div class="item_title">现在开始天晴了！</div>
+                    <div class="time">2020年09月09日</div>
+                    <div class="item_content">当你投入一个角色的时候，你会发现自己内心的一部分会慢慢靠近，甚至变成角色，它会扎在你的内心深处并始终影响着你，也许一辈子都无法改变。</div>
+                    <div class="more"><a href="javascript:;">阅读更多</a></div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/item2.jpg">
+                    </a>
+                    <div class="item_title">我只是想再一次的见到她啊</div>
+                    <div class="time">2020年09月09日</div>
+                    <div class="item_content">
+                        人生就是充满着幸福、快乐，同时也会遇到失落、无助的时候。人生就是要勇敢去面对一连串的难关，每碰到一个，不管多么困难，都要咬紧牙根，撑过去。老天拿走你什么，一定会补给你一点什么，每次的成长绝对会超出你的想象。
+                    </div>
+                    <div class="more"><a href="javascript:;">阅读更多</a></div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/item3.jpg">
+                    </a>
+                    <div class="item_title">100%的晴天女孩？</div>
+                    <div class="time">2020年09月09日</div>
+                    <div class="item_content">
+                        做歌手和做演员是相反的，歌手要保持一定的出镜率和曝光度，这样才有人气，而演员在诠释一个角色之后，就要把自己“藏”起来，一方面是让前面的角色的痕迹慢慢褪去，一方面是积累，然后再去演另外的一个完全不同的，才有说服力。
+                    </div>
+                    <div class="more"><a href="javascript:;">阅读更多</a></div>
+                </li>
+            </ul>
+            <div class="end"></div>
+            <div class="splits">
+                <div class="about">··· <span>关于</span></div>
+            </div>
+            <div class="end">
+                <div class="title">
+                    <p>因为生活总有不如意不快乐的时候，不管发生什么事，都要抱着积极正面的态度去面对，而风和日丽是比喻好的天气一定会来。</p>
+                    <p>——Aster</p>
+                </div>
+            </div>
+            <div class="footer">
+                <ul>
+                    <li>
+                        <div class="t">相关链接</div>
+                        <div><a href="javascript:;"> 留言</a></div>
+                        <div><a href="javascript:;"> 日记</a></div>
+                    </li>
+                    <li>
+                        <div class="t">联系我们</div>
+                        <div><a href="javascript:;"> 地址：天河区堪萨斯你那是的南丹山</a></div>
+                        <div><a href="javascript:;"> QQ：2860694345</a></div>
+                        <div><a href="javascript:;"> 邮箱：2860694345@qq.com</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var flag = true;
+        $(".nav").on("click", function () {
+            if (flag) {
+                $(".panpel").animate({ "right": "-175px" });
+                flag = false;
+            } else {
+                $(".panpel").animate({ "right": "-658px" });
+                flag = true;
+            }
+        });
+        $(".slide").on("click", function () {
+            $("html, body").animate({ "scrollTop": "721.6" }, 520);
+        })
+    </script>
+</body>
+
+</html>
